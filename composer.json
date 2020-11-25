@@ -43,16 +43,6 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Spatie\\PriceApi\\PriceApiServiceProvider"
-            ],
-            "aliases": {
-                "PriceApi": "Spatie\\PriceApi\\PriceApiFacade"
-            }
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "funding": [
