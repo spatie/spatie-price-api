@@ -1,0 +1,20 @@
+{
+    "actual": {
+        "price_in_cents": 19920,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "formatted_price": "$199.20"
+    },
+    "without_discount": {
+        "price_in_cents": 24900,
+        "currency_code": "USD",
+        "currency_symbol": "$",
+        "formatted_price": "$249"
+    },
+    "discount": {
+        "active": true,
+        "percentage": 20,
+        "name": "Flash sale",
+        "expires_at": 1606820400
+    }
+}

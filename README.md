@@ -1,11 +1,10 @@
-# The Price API used at promotional sites for our own products
+# The price API used at promotional sites for our own products
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/spatie-price-api.svg?style=flat-square)](https://packagist.org/packages/spatie/spatie-price-api)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/spatie-price-api/run-tests?label=tests)](https://github.com/spatie/spatie-price-api/actions?query=workflow%3Arun-tests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/spatie-price-api.svg?style=flat-square)](https://packagist.org/packages/spatie/spatie-price-api)
 
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package can retrieve prices from the API at spatie.be. It is used at the promotional sites for [our own products](https://spatie.be/products). Though it is open source, the package is not intended to be used by third parties.
 
 ## Support us
 
@@ -25,29 +24,10 @@ composer require spatie/spatie-price-api
 
 You can publish and run the migrations with:
 
-```bash
-php artisan vendor:publish --provider="Spatie\PriceApi\PriceApiServiceProvider" --tag="migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-```bash
-php artisan vendor:publish --provider="Spatie\PriceApi\PriceApiServiceProvider" --tag="config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
 
 ## Usage
 
-``` php
-$spatie-price-api = new Spatie\PriceApi();
-echo $spatie-price-api->echoPhrase('Hello, Spatie!');
-```
+You can get a pricing information using the `App\Support\SpatiePrices\SpatiePriceApi::getPriceForPurchasable()` method.
 
 ## Testing
 

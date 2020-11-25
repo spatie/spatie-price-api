@@ -1,0 +1,16 @@
+couldFetchPrice: true
+actual:
+    priceInCents: 16314
+    currencyCode: EUR
+    currencySymbol: €
+    formattedPrice: €163.14
+withoutDiscount:
+    priceInCents: 20393
+    currencyCode: EUR
+    currencySymbol: €
+    formattedPrice: €203.93
+discount:
+    active: true
+    percentage: 20
+    name: 'Flash sale'
+    expiresAtTimestamp: '1606820400'
