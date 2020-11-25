@@ -22,9 +22,6 @@ You can install the package via composer:
 composer require spatie/spatie-price-api
 ```
 
-You can publish and run the migrations with:
-
-
 ## Usage
 
 You can get a pricing information using the `App\Support\SpatiePrices\SpatiePriceApi::getPriceForPurchasable()` method.
