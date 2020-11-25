@@ -28,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\PriceApi\\": "src",
+            "Spatie\\PriceApi\\": "src"
         }
     },
     "autoload-dev": {
