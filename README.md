@@ -1,7 +1,7 @@
 # The price API used at promotional sites for our own products
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/spatie-price-api.svg?style=flat-square)](https://packagist.org/packages/spatie/spatie-price-api)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/spatie-price-api/run-tests?label=tests)](https://github.com/spatie/spatie-price-api/actions?query=workflow%3Arun-tests+branch%3Amaster)
+![Tests](https://github.com/spatie/spatie-price-api/workflows/Tests/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/spatie-price-api.svg?style=flat-square)](https://packagist.org/packages/spatie/spatie-price-api)
 
 This package can retrieve prices from the API at spatie.be. It is used at the promotional sites for [our own products](https://spatie.be/products). Though it is open source, the package is not intended to be used by third parties.

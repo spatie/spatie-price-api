@@ -24,13 +24,11 @@
     "require-dev": {
         "orchestra/testbench": "^6.0",
         "phpunit/phpunit": "^9.3",
-        "spatie/phpunit-snapshot-assertions": "^4.2",
-        "vimeo/psalm": "^3.11"
+        "spatie/phpunit-snapshot-assertions": "^4.2"
     },
     "autoload": {
         "psr-4": {
             "Spatie\\PriceApi\\": "src",
-            "Spatie\\PriceApi\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
@@ -39,7 +37,6 @@
         }
     },
     "scripts": {
-        "psalm": "vendor/bin/psalm",
         "test": "vendor/bin/phpunit --colors=always",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
