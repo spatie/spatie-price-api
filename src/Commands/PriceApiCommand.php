@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Spatie\PriceApi\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PriceApiCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'spatie-price-api';
 
     public $description = 'My command';
 
