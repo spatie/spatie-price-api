@@ -2,10 +2,10 @@
 
 namespace Spatie\PriceApi;
 
-use Spatie\PriceApi\Dto\Discount;
-use Spatie\PriceApi\Dto\Price;
 use Cache;
 use Illuminate\Support\Facades\Http;
+use Spatie\PriceApi\Dto\Discount;
+use Spatie\PriceApi\Dto\Price;
 
 class SpatiePriceApi
 {
