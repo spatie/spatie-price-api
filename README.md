@@ -8,7 +8,7 @@ This package can retrieve prices from the API at spatie.be. It is used at the pr
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/spatie-price-api.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/spatie-price-api)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/spatie-price-api.jpg?t=2" width="419px" />](https://spatie.be/github-ad-click/spatie-price-api)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
@@ -21,9 +21,6 @@ You can install the package via composer:
 ```bash
 composer require spatie/spatie-price-api
 ```
-
-You can publish and run the migrations with:
-
 
 ## Usage
 
