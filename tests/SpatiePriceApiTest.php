@@ -18,11 +18,11 @@ class SpatiePriceApiTest extends Orchestra
 
         Http::fake([
             'freegeoip.app/*' => Http::response(['country_code' => 'BE']),
-            'spatie.be' => Http::response($response),
+            'spatie.be/*' => Http::response($response),
         ]);
 
-        $response = SpatiePriceApi::getPriceForPurchasable(1);
+        $priceInfo = SpatiePriceApi::getPriceForPurchasable(1);
 
-        $this->assertMatchesSnapshot($response);
+        $this->assertMatchesSnapshot($priceInfo);
     }
 }
