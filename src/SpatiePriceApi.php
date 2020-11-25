@@ -16,7 +16,7 @@ class SpatiePriceApi
         $countryCode = FreeGeoIp::getCountryCodeForIp($ip);
 
         $response = Cache::remember("price-{$purchasableId}-{$countryCode}", 60, function () use ($purchasableId, $countryCode) {
-            $response = Http::get("http://spatie.be.test/api/price/{$purchasableId}}/{$countryCode}");
+            $response = Http::get("https://spatie.be/api/price/{$purchasableId}}/{$countryCode}");
 
             if (! $response->successful()) {
                 return null;
