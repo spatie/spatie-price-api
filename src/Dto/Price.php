@@ -2,6 +2,7 @@
 
 namespace Spatie\PriceApi\Dto;
 
+use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 
 class Price
@@ -33,14 +34,16 @@ class Price
         $this->formattedPrice = $formattedPrice;
     }
 
-    public function formattedPrice(): string
+    public function formattedPrice(): HtmlString
     {
         $amount = number_format($this->priceInCents / 100, 2, '.', ' ');
 
         $amount = Str::replaceLast('.00', '', $amount);
 
-        return $this->currencySymbol
-            ? "{$this->currencySymbol}{$amount}"
+        $string = $this->currencySymbol
+            ? "<sup>{$this->currencySymbol}</sup>{$amount}"
             : "{$amount} {$this->currencyCode}";
+
+        return new HtmlString($string);
     }
 }
