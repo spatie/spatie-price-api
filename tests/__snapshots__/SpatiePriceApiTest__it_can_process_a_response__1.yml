@@ -3,12 +3,12 @@ actual:
     priceInCents: 19920
     currencyCode: USD
     currencySymbol: $
-    formattedPrice: $199.20
+    formattedPrice: { empty: false, notEmpty: true }
 withoutDiscount:
     priceInCents: 24900
     currencyCode: USD
     currencySymbol: $
-    formattedPrice: $249
+    formattedPrice: { empty: false, notEmpty: true }
 discount:
     active: true
     percentage: 20

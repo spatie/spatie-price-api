@@ -40,9 +40,7 @@ class Price
 
         $amount = Str::replaceLast('.00', '', $amount);
 
-        $string = $this->currencySymbol
-            ? "<sup>{$this->currencySymbol}</sup>{$amount}"
-            : "{$amount} {$this->currencyCode}";
+        $string = "{$amount} {$this->currencyCode}";
 
         return new HtmlString($string);
     }
