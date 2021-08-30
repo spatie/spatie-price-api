@@ -41,4 +41,37 @@ class SpatiePriceApi
             'discount' => Discount::createFromResponse($response['discount']),
         ];
     }
+
+    public static function getPriceForBundle(int $bundleId): ?array
+    {
+        $ip = request()->ip();
+
+        $countryCode = FreeGeoIp::getCountryCodeForIp($ip);
+
+        $response = Cache::remember("bundle-price-{$bundleId}-{$countryCode}", 60, function () use ($bundleId, $countryCode) {
+            $response = Http::get("https://spatie.be/api/bundle-price/{$bundleId}}/{$countryCode}");
+
+            if (! $response->successful()) {
+                return null;
+            }
+
+            return $response->json();
+        });
+
+        if (is_null($response) || ! array_key_exists('actual', $response)) {
+            return [
+                'couldFetchPrice' => false,
+                'actual' => null,
+                'withoutDiscount' => null,
+                'discount' => null,
+            ];
+        }
+
+        return [
+            'couldFetchPrice' => true,
+            'actual' => Price::createFromResponse($response['actual']),
+            'withoutDiscount' => Price::createFromResponse($response['without_discount']),
+            'discount' => Discount::createFromResponse($response['discount']),
+        ];
+    }
 }

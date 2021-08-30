@@ -2,6 +2,10 @@
 
 All notable changes to `spatie-price-api` will be documented in this file
 
+## 1.1.0 - 2021-08-30
+
+- add price for bundle
+
 ## 1.0.4 - 2021-05-06
 
 - improve formatting
