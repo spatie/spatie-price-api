@@ -2,6 +2,12 @@
 
 All notable changes to `spatie-price-api` will be documented in this file
 
+## 1.1.2 - 2022-04-25
+
+- Handle FreeGeoIP timeouts
+
+**Full Changelog**: https://github.com/spatie/spatie-price-api/compare/1.1.1...1.1.2
+
 ## 1.1.0 - 2021-08-30
 
 - add price for bundle
