@@ -12,7 +12,8 @@ class FreeGeoIp
     {
         try {
             return Cache::remember("countryCodeIp{$ip}", 60 * 5, function () use ($ip) {
-                $response = Http::timeout(3)->connectTimeout(3)->get("https://freegeoip.app/json/{$ip}");
+                $response = Http::timeout(3)
+                    ->get("https://freegeoip.app/json/{$ip}");
 
                 if ($response->status() !== 200) {
                     return 'US';
