@@ -13,10 +13,8 @@ class SpatiePriceApi
     {
         $ip = request()->ip();
 
-        $countryCode = FreeGeoIp::getCountryCodeForIp($ip);
-
-        $response = Cache::remember("price-{$purchasableId}-{$countryCode}", 60, function () use ($purchasableId, $countryCode) {
-            $response = Http::get("https://spatie.be/api/price/{$purchasableId}}/{$countryCode}");
+        $response = Cache::remember("price-{$purchasableId}-{$ip}", 60, function () use ($ip, $purchasableId) {
+            $response = Http::get("https://spatie.be/api/price/{$purchasableId}/{$ip}");
 
             if (! $response->successful()) {
                 return null;
@@ -46,10 +44,8 @@ class SpatiePriceApi
     {
         $ip = request()->ip();
 
-        $countryCode = FreeGeoIp::getCountryCodeForIp($ip);
-
-        $response = Cache::remember("bundle-price-{$bundleId}-{$countryCode}", 60, function () use ($bundleId, $countryCode) {
-            $response = Http::get("https://spatie.be/api/bundle-price/{$bundleId}}/{$countryCode}");
+        $response = Cache::remember("bundle-price-{$bundleId}-{$ip}", 60, function () use ($bundleId, $ip) {
+            $response = Http::get("https://spatie.be/api/bundle-price/{$bundleId}/{$ip}");
 
             if (! $response->successful()) {
                 return null;
