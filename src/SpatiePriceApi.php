@@ -14,7 +14,7 @@ class SpatiePriceApi
         $ip = request()->ip();
 
         $response = Cache::remember("price-{$purchasableId}-{$ip}", 60, function () use ($ip, $purchasableId) {
-            $response = Http::get("https://spatie.be/api/price/{$purchasableId}}/{$ip}");
+            $response = Http::get("https://spatie.be/api/price/{$purchasableId}/{$ip}");
 
             if (! $response->successful()) {
                 return null;
