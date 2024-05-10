@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.2",
-        "illuminate/contracts": "^8.0|^9.0|^10.0",
-        "illuminate/http": "^8.0|^9.0|^10.0"
+        "illuminate/contracts": "^10.0|^11.0",
+        "illuminate/http": "^10.0|^11.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.0|^7.0|^8.0",
+        "orchestra/testbench": "^8.0|^9.0",
         "phpunit/phpunit": "^9.4",
         "spatie/phpunit-snapshot-assertions": "^4.2"
     },
