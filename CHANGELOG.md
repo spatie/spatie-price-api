@@ -2,6 +2,12 @@
 
 All notable changes to `spatie-price-api` will be documented in this file
 
+## 1.4.0 - 2024-05-10
+
+* Add support for L11
+
+**Full Changelog**: https://github.com/spatie/spatie-price-api/compare/1.3.0...1.4.0
+
 ## 1.3.0 - 2023-03-13
 
 - Add support for Laravel 10
