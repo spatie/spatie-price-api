@@ -11,8 +11,7 @@ class SpatiePriceApiTest extends Orchestra
 {
     use MatchesSnapshots;
 
-    /** @test */
-    public function it_can_process_a_response()
+    public function test_it_can_process_a_response()
     {
         $response = file_get_contents(__DIR__. '/stubs/response.json');
 
