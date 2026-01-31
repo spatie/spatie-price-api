@@ -1,6 +1,3 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # The price API used at promotional sites for our own products
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/spatie-price-api.svg?style=flat-square)](https://packagist.org/packages/spatie/spatie-price-api)
