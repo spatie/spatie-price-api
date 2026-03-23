@@ -2,6 +2,10 @@
 
 All notable changes to `spatie-price-api` will be documented in this file
 
+## 1.6.0 - 2026-03-23
+
+Laravel 13
+
 ## 1.5.0 - 2025-02-27
 
 * Laravel 12
