@@ -2,6 +2,12 @@
 
 All notable changes to `spatie-price-api` will be documented in this file
 
+## 1.7.0 - 2026-10-03
+
+- Add `SpatiePriceApi::scripts()` with the Alpine components `spatiePrice(id)` and `spatieBundlePrice(id)` to fetch prices and run the discount countdown in the browser (#3)
+
+**Full Changelog**: https://github.com/spatie/spatie-price-api/compare/1.6.0...1.7.0
+
 ## 1.6.0 - 2026-03-23
 
 Laravel 13
