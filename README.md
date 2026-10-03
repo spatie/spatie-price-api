@@ -24,7 +24,47 @@ composer require spatie/spatie-price-api
 
 ## Usage
 
-You can get a pricing information using the `App\Support\SpatiePrices\SpatiePriceApi::getPriceForPurchasable()` method.
+You can get a pricing information using the `Spatie\PriceApi\SpatiePriceApi::getPriceForPurchasable()` method.
+
+### Fetching prices in the browser
+
+The price depends on the country of the visitor. When prices are fetched on the server, a page can't be cached at the edge. Instead, you can let the browser of the visitor fetch the price from the spatie.be API.
+
+Add the scripts to your layout:
+
+```blade
+{{ \Spatie\PriceApi\SpatiePriceApi::scripts() }}
+```
+
+This adds two Alpine data components: `spatiePrice($purchasableId)` and `spatieBundlePrice($bundleId)`.
+
+```blade
+<div x-data="spatiePrice(20)" x-init="init()">
+    <template x-if="discount.active">
+        <p>
+            <span x-text="discount.name"></span> ending in
+            <span x-text="countdown.days"></span> days
+            <span x-text="countdown.hours"></span> hours
+            <span x-text="countdown.minutes"></span> minutes
+        </p>
+    </template>
+
+    <s x-show="discount.active" x-text="priceWithoutDiscount"></s>
+
+    <span x-text="couldFetchPrice ? price : '-'">-</span>
+</div>
+```
+
+These properties are available:
+
+- `loaded`: whether the request to the API has finished
+- `couldFetchPrice`: whether a price could be fetched
+- `price` and `priceWithoutDiscount`: the formatted price, for example `149 EUR`
+- `discount`: an object with `active`, `percentage`, `name` and `expiresAt` (a unix timestamp)
+- `countdown`: an object with `days`, `hours`, `minutes` and `seconds` until the discount expires, updated every second
+- `response`: the raw response of the API
+
+Alpine v3 calls `init()` automatically. On Alpine v2, add `x-init="init()"`. Calling it twice is harmless. Components for the same product share a single request.
 
 ## Testing
 

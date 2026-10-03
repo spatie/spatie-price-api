@@ -4,6 +4,7 @@ namespace Spatie\PriceApi;
 
 use Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\HtmlString;
 use Spatie\PriceApi\Dto\Discount;
 use Spatie\PriceApi\Dto\Price;
 
@@ -69,5 +70,12 @@ class SpatiePriceApi
             'withoutDiscount' => Price::createFromResponse($response['without_discount']),
             'discount' => Discount::createFromResponse($response['discount']),
         ];
+    }
+
+    public static function scripts(): HtmlString
+    {
+        $script = file_get_contents(__DIR__.'/../resources/js/spatie-price-api.js');
+
+        return new HtmlString("<script>{$script}</script>");
     }
 }
