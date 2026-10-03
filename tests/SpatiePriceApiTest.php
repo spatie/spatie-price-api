@@ -23,4 +23,15 @@ class SpatiePriceApiTest extends Orchestra
 
         $this->assertMatchesSnapshot($priceInfo);
     }
+
+    public function test_it_can_render_the_scripts_to_fetch_prices_in_the_browser()
+    {
+        $scripts = SpatiePriceApi::scripts()->toHtml();
+
+        $this->assertStringStartsWith('<script>', $scripts);
+        $this->assertStringEndsWith('</script>', $scripts);
+        $this->assertStringContainsString('window.spatiePrice = ', $scripts);
+        $this->assertStringContainsString('window.spatieBundlePrice = ', $scripts);
+        $this->assertStringContainsString('https://spatie.be/api', $scripts);
+    }
 }
